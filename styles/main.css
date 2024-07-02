@@ -1,0 +1,213 @@
+.homeContent {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 842px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.left,
+.right {
+  border: 1px solid black;
+  width: 100%;
+  height: calc(50% - 10px);
+  /* 50% minus 10px oben und 10px unten */
+  margin: 10px 0;
+  /* 10px oben und unten */
+}
+
+.left {
+  background: url(/images/homeImage.jpg) center/contain no-repeat;
+}
+
+.homeContent .right {
+  text-align: center;
+  /* Horizontal zentriert */
+  justify-content: center;
+}
+
+.homeContent .right h1 {
+  font-size: 25px;
+  padding: 30px;
+  color: darkblue;
+}
+
+.homeContent .right p {
+  font-size: 20px;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+
+.homeContent .bookBtn {
+  border: 1px solid black;
+  border-radius: 30px;
+  color: black;
+  padding: 8px;
+  width: 120px;
+  font-size: medium;
+}
+
+.homeContent .bookBtn:hover {
+  background-color: CadetBlue;
+}
+
+/* Styling for the reservation section */
+.reservationWrapper {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: -8px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Styling for the form section */
+.reservationForm {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid black;
+}
+
+.reservationForm h2 {
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formGroup input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  border: 1px solid black;
+  border-radius: 30px;
+  color: black;
+  padding: 8px;
+  width: 100%;
+  font-size: medium;
+}
+
+button[type="submit"]:hover {
+  background-color: CadetBlue;
+}
+
+/* Styling for the reservation grid */
+#reservationGrid {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border: 1px solid black;
+}
+
+/* Grid row styling */
+.gridRow {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+/* Individual grid item styling */
+.gridItem {
+  display: flex;
+  flex: 1;
+  max-width: calc(100% / 3 - 10px);
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  margin: 2px;
+}
+
+/*TO-DO: Replace chair and table objects with images*/
+
+.gridItem.chair {
+  background-image: url(../images/chair.png);
+}
+
+.gridItem.table {
+  background-image: url(../images/table.png);
+  color: white;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .homeContent {
+    flex-direction: row;
+    overflow: hidden;
+    /* Verhindert das Überschreiten der Höhe */
+  }
+
+  .homeContent .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* vertikal */
+    justify-content: center;
+    /* horizontal */
+  }
+
+  .homeContent .right h1 {
+    font-size: 60px;
+    padding: 30px;
+    color: darkblue;
+  }
+
+  .homeContent .right p {
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  .homeContent .bookBtn {
+    border: 1px solid black;
+    border-radius: 30px;
+    color: black;
+    padding: 10px;
+    width: 120px;
+    font-size: medium;
+  }
+
+  .left,
+  .right {
+    width: 50%;
+    /* Jedes Element nimmt 50% der Breite ein */
+    height: 98%;
+  }
+
+  .left {
+    margin-right: 10px;
+    /* Fügt einen Abstand zwischen left und right hinzu */
+  }
+}

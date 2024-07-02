@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/util.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Q6i_VW8KlcRou5y0J",
+      });
+   })();
+</script>
+</head>
+
+<body>
+    <header class="header container" style="border: 1px solid black;">
+        <nav>
+            <!-- Sidebar navigation -->
+            <ul class="sidebar">
+                <div class="iconsRow">
+                    <li id="xIcon" onclick=hideSidebar()>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
+                                fill="black">
+                                <path
+                                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg></a>
+                    </li>
+                    <li onclick=toggleSwitch(event) id="toggleSwitch">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </a>
+                    </li>
+                </div>
+
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#reservation">RESERVATION</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+            <!-- Main navigation -->
+            <ul id="mainNav">
+                <li><a href="#"><img src="images/logo.png" id="logo" alt="Logo"></a></li>
+                <li class="hideOnMobile"><a href="#">HOME</a></li>
+                <li class="hideOnMobile"><a href="#about">ABOUT</a></li>
+                <li class="hideOnMobile"><a href="#menu">MENU</a></li>
+                <li class="hideOnMobile"><a href="#reservation">RESERVATION</a></li>
+                <li class="hideOnMobile"><a href="#">CONTACT</a></li>
+                <!-- The onclick attribute calls the showSidebar function and passes the event object -->
+                <li id="menuBtn" onclick=showSidebar(event)><a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
+                            fill="black">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a>
+                </li>
+                <li class="headerLine"></li>
+                <li onclick=toggleSwitch(event) id="toggleSwitch"> <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </a>
+                </li>
+        </nav>
+    </header>
+
+    <main>
+        <section class="homeContent container">
+            <div class="left"></div>
+            <div class="right">
+                <h1>welcome to our Shushi & Ramin Kingdom Resturant</h1>
+                <p>it's not just Food, it's an Experience</p>
+                <a href="#reservation" class="bookBtn">Book a table</a>
+            </div>
+        </section>
+        <!-- Reservation start -->
+        <section id="reservation" class="container">
+            <div class="reservationWrapper">
+                <!-- Form (left) section -->
+                <div class="reservationForm">
+                    <h2>Reservation Form</h2>
+                    <form id="reservationForm">
+                        <div class="formGroup">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="formGroup">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="formGroup">
+                            <label for="time">Time:</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                        <div class="formGroup">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="formGroup">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="formGroup">
+                            <label for="peopleCount">Number of People:</label>
+                            <input type="number" id="peopleCount" name="peopleCount" min="1" required>
+                        </div>
+                        <button type="submit">Submit your reservation!</button>
+                    </form>
+                </div>
+                <!-- Grid (right) section -->
+                <div id="reservationGrid">
+                    <!-- Will be handled dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="src/script.js"></script>
+</body>
+
+</html>

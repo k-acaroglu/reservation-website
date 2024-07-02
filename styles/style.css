@@ -1,0 +1,47 @@
+:root {
+    --clr-darkblue: #00008b;
+    --clr-blue400: #60a5fa;
+    --clr-blue600: #2563eb;
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+
+    /*sizes tailwind*/
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    line-height: calc(1em + 00.5rem);
+    color: var(--cls-black);
+    font-weight: lighter;
+}
+
+body {
+    font-family: fantasy, TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+    cursor: pointer;
+}
