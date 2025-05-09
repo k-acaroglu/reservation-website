@@ -2,7 +2,7 @@
 
 A responsive website for a fictional restaurant, **Sushi & Ramen Kingdom**, featuring an interactive table reservation system and a clean, mobile-friendly layout. Built as a team project.
 
-> **Note:** I was mainly responsible for the reservation system functionality (form handling, grid rendering, email integration). The rest of the website was built collaboratively.
+> **Note:** I was mainly responsible for the reservation system functionality (form handling, grid rendering, email integration). The rest of the website was built collaboratively. This isn't the finished product, but rather a showcase of the section that I was responsible for.
 
 ---
 
